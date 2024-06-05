@@ -6,8 +6,8 @@ WORKDIR /usr/src/app
 
 # 安装应用依赖
 COPY package.json ./
-COPY package-lock.json ./
-RUN npm install
+COPY yarn.lock ./
+RUN yarn install --ignore-optional
 
 # 复制应用源代码
 COPY . .
@@ -16,5 +16,5 @@ COPY . .
 EXPOSE 1338
 
 # 启动 Strapi 服务器
-CMD ["npm", "run", "develop"]
+CMD ["yarn", "develop"]
 

@@ -7,10 +7,12 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "postinstall": "npx esbuild --version"
   },
   "devDependencies": {},
   "dependencies": {
+    "esbuild": "^0.14.0",  
     "@strapi/strapi": "4.24.4",
     "@strapi/plugin-users-permissions": "4.24.4",
     "@strapi/plugin-i18n": "4.24.4",
